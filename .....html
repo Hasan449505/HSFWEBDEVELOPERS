@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HSF WEB BUILDERS</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      overflow-x: hidden;
+      background-color: #f4f4f4;
+    }
+
+    /* Background */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 200%;
+      height: 100%;
+      background: url('o (1).jpg') repeat-x;
+      background-size: cover;
+      animation: moveBackground 20s linear infinite;
+      z-index: -1;
+    }
+
+    /* Header */
+    header {
+      background: url('HSF .jpg') center center/cover no-repeat;
+      color: white;
+      padding: 80px 40px;
+      text-align: center;
+      animation: fadeIn 2s ease-out;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+      font-family: 'Courier New', Courier, monospace;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+
+    header p {
+      font-size: 1.5rem;
+      font-style: italic;
+      font-family: 'Georgia', serif;
+      margin: 10px 0;
+    }
+
+    /* Navigation Bar */
+    nav {
+      display: flex;
+      justify-content: center;
+      background: rgba(51, 51, 51, 0.9);
+      padding: 15px 0;
+      animation: fadeIn 2s ease-out;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      position: relative;
+      padding: 5px 0;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #f0c14b;
+      transform: scale(1.1);
+    }
+
+    /* Hero Section */
+    .hero {
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+      background: rgba(106, 17, 203, 0.6);
+      animation: fadeIn 3s ease-out;
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      margin-bottom: 20px;
+      font-family: 'Brush Script MT', cursive;
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+      font-family: 'Georgia', serif;
+      font-style: italic;
+      letter-spacing: 2px;
+    }
+
+    /* Services Section */
+    .services {
+      padding: 60px 20px;
+      text-align: center;
+      background-color: #f4f4f4;
+      animation: fadeInUp 2s ease-out;
+    }
+
+    .services h2 {
+      margin-bottom: 30px;
+      font-size: 2.5rem;
+      font-family: 'Arial', sans-serif;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .services-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      padding: 20px;
+    }
+
+    .service {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service:hover {
+      transform: scale(1.05);
+      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+    }
+
+    .service h3 {
+      margin-bottom: 15px;
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #5a5a5a;
+    }
+
+    .service p {
+      font-size: 1.2rem;
+      color: #777;
+      font-style: italic;
+    }
+
+    /* Footer */
+    footer {
+      background: rgba(30, 30, 47, 0.9);
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      animation: fadeInUp 2.5s ease-out;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    footer .contact-numbers {
+      margin-top: 15px;
+    }
+
+    footer .contact-numbers a {
+      color: #f0c14b;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    footer .contact-numbers a:hover {
+      text-decoration: underline;
+      color: #fff;
+    }
+
+    /* Keyframe Animations */
+    @keyframes moveBackground {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+  <script>
+    function showContactNumber() {
+      alert("You can reach us at: \n+91 9745544623\n+91 62382 16838\n+91 80865 49517");
+    }
+  </script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>HSF WEB BUILDERS</h1>
+    <p>We Build. We Design. We Deliver.</p>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="#hero">Home</a>
+    <a href="#services">Services</a>
+    <a href="javascript:void(0);" onclick="showContactNumber()">Contact</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <h1>Professional Website Building Services</h1>
+    <p>Creating stunning websites tailored to your needs.</p>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="services-container">
+      <div class="service">
+        <h3>Custom Website Design</h3>
+        <p>We create beautiful, responsive designs that captivate your audience.</p>
+      </div>
+      <div class="service">
+        <h3>E-commerce Development</h3>
+        <p>Powerful online stores to grow your business.</p>
+      </div>
+      <div class="service">
+        <h3>SEO Optimization</h3>
+        <p>Boost your website's visibility and rank higher on search engines.</p>
+      </div>
+      <div class="service">
+        <h3>Website Maintenance</h3>
+        <p>Keep your website up-to-date and running smoothly.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 HSF WEB BUILDERS. All Rights Reserved.</p>
+    <div class="contact-numbers">
+      <p>Contact Us:</p>
+      <p>
+        <a href="javascript:void(0);" onclick="showContactNumber()">+91 9745544623, +91 62382 16838, +91 80865 49517</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
